@@ -1,0 +1,13 @@
+Se trata de la impementación de un pequeño e-commerce. Les planteo aquí los requisitos:
+
+La aplicación deberá contemplar el alta, bajas y modificaciones de los siguientes datos y sus campos:
+Marcas: Nombre
+Categorias: Nombre
+Productos: Código único, precio, descripción, marca y categorias, imágen.
+La aplicación deberá tener un home page listando los últimos productos agregados.
+La aplicación deberá tener listados por marca.
+La aplicación deberá tener listados por categoría.
+Los usuarios deberán poder registrarse. Para eso tienen que usar devise.
+Solo los usuarios registrados podrán agregar productos al carrito de compras.
+El código fuente tiene que estar subido a GitHub.
+La aplicación tiene que estar subida a Heroku

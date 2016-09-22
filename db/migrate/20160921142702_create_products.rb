@@ -1,10 +1,9 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :products do |t|
-      t.string :sku
-      t.string :precio
+      t.string :sku, index: true
       t.string :descripcion
-      t.string :imagen
+      t.decimal :precio
 
       t.timestamps
     end

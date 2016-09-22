@@ -17,13 +17,8 @@
   </div>
 
   <div class="field">
-    <%= f.label "Categoría" %>
-    <%= select(:product, "category_id", Category.all.collect {|cat| [ cat.nombre, cat.id ] }) %>  
-  </div>
-
-  <div class="field">
-    <%= f.label "Marca" %>
-    <%= select(:product, "trademark_id", Trademark.all.collect {|mar| [ mar.nombre, mar.id ] }) %>  
+    <%= f.label :descripcion %>
+    <%= f.text_field :descripcion %>
   </div>
 
   <div class="field">
@@ -31,17 +26,22 @@
     <%= f.text_field :precio %>
   </div>
 
-  <div class="field">
-    <%= f.label :descripcion %>
-    <%= f.text_field :descripcion %>
+  
+
+<div class="field">
+  <%= f.label "Categoría" %>
+    <%= select("product", "category_id", Category.all.collect {|cat| [ cat.nombre, cat.id ] } )%>
   </div>
 
-  <div class="field">
-    <%= f.label :imagen %>
-    <%= f.file_field :imagen %>
-  </div>
+
+<div class="field">
+  <%= f.label "Marca" %>
+  <%= select("product", "trademark_id", Trademark.all.collect {|tm|  [tm.nombre, tm.id]} ) %>
+</div>
+
 
   <div class="actions">
-    <%= f.submit "Crear artículo" %>
+    <%= f.submit "Guardar" %>
   </div>
 <% end %>
+

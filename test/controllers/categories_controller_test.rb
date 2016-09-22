@@ -17,7 +17,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create category" do
     assert_difference('Category.count') do
-      post categories_url, params: { category: { nombre: @category.nombre } }
+      post categories_url, params: { category: { descripcion: @category.descripcion, nombre: @category.nombre } }
     end
 
     assert_redirected_to category_url(Category.last)
@@ -34,7 +34,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update category" do
-    patch category_url(@category), params: { category: { nombre: @category.nombre } }
+    patch category_url(@category), params: { category: { descripcion: @category.descripcion, nombre: @category.nombre } }
     assert_redirected_to category_url(@category)
   end
 

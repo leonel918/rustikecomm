@@ -2,12 +2,10 @@
 
 one:
   sku: MyString
-  precio: MyString
   descripcion: MyString
-  imagen: MyString
+  precio: 9.99
 
 two:
   sku: MyString
-  precio: MyString
   descripcion: MyString
-  imagen: MyString
+  precio: 9.99

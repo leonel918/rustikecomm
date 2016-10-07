@@ -39,6 +39,11 @@
   <%= select("product", "trademark_id", Trademark.all.collect {|tm|  [tm.nombre, tm.id]} ) %>
 </div>
 
+<div class="field">
+  <%= f.label "Foto del producto" %>
+  <%= f.file_field :imagen %>
+</div>
+
 
   <div class="actions">
     <%= f.submit "Guardar" %>

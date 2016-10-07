@@ -1,10 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-
-
-
-
-<h1>Products</h1>
+<p>Los 5 productos más nuevos:</p>
 
 <table>
   <thead>
@@ -17,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
+    <% @products.reverse_order.first(5).each do |product| %>
       <tr>
         <td><%= product.sku %></td>
         <td><%= product.descripcion %></td>
@@ -30,6 +24,6 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+<p><%= link_to "Listado de Artículos", products_path %></p>
+<p><%= link_to "Listado de Marcas"%></p>
+<p><%= link_to "Listado de Categorías"%></p>

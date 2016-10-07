@@ -20,5 +20,11 @@
   <%= @product.category.nombre %>
 </p>
 
+<p>
+  <strong>Imágen:</strong>
+	<%= image_tag @product.imagen.url(:thumb) %>
+</p>
+
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
